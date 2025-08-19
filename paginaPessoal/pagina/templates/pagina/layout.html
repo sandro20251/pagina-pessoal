@@ -19,7 +19,7 @@
     <nav>
         <a href="{% url 'index' %}">início</a>
         <a href="{% url 'login' %}">login</a>
-        <a href="#">logout</a>
+        <a href="{% url 'logout'%}">logout</a>
     </nav>
     {% block body %}{% endblock %}
     <script src="{% static 'pagina/dist/scripts.js' %}"></script>
