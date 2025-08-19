@@ -80,3 +80,56 @@ class Testes(TestCase):
         c = Client()
         response = c.get("/recados/")
         self.assertEqual(response.status_code, 200)
+
+    # testes de crud de modelos
+
+    # modelo Recados
+
+    def test_alterarRecados(self):
+        """alterando conteudod e recados"""
+        recado = Recados.objects.get(nomeRecados="aaa")
+        recado.assuntoRecados = "modificado"
+        recado.save()
+        recado2 = Recados.objects.filter(assuntoRecados="modificado")
+        self.assertEqual(recado2.count(), 1)
+
+    def test_removerRecados(self):
+        """removendo um recado"""
+        recado = Recados.objects.get(nomeRecados="aaa")
+        recado.delete()
+        recados = Recados.objects.all()
+        self.assertEqual(recados.count(), 2)
+
+   # modelo Cursos
+
+    def test_alterarCursos(self):
+        """alterando um curso"""
+        curso = Cursos.objects.get(tituloCursos="iii")
+        curso.descricaoCursos = "modificado"
+        curso.save()
+        curso2 = Cursos.objects.filter(descricaoCursos="modificado")
+        self.assertEqual(curso2.count(), 1)
+
+    def test_excluirCursos(self):
+        """Excluindo um curso"""
+        curso = Cursos.objects.get(tituloCursos="iii")
+        curso.delete()
+        cursos = Cursos.objects.all()
+        self.assertEqual(cursos.count(), 2)
+
+    # modelo Projetos
+
+    def test_tituloProjetos(self):
+        """alterando um projeto"""
+        projeto = Projetos.objects.get(tituloProjetos="rrr")
+        projeto.descricaoProjetos = "modificado"
+        projeto.save()
+        projeto2 = Projetos.objects.filter(descricaoProjetos="modificado")
+        self.assertEqual(projeto2.count(), 1)
+
+    def test_excluindoProjeto(self):
+        """Excluindo um porjeto"""
+        projeto = Projetos.objects.get(tituloProjetos="rrr")
+        projeto.delete()
+        projetos = Projetos.objects.all()
+        self.assertEqual(projetos.count(), 2)
