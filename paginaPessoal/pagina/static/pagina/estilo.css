@@ -1,3 +1,8 @@
+* {
+    color: #4B5563;
+
+}
+
 header {
     display: flex;
     justify-content: center;
@@ -9,7 +14,8 @@ nav {
     justify-content: center;
     text-align: center;
     gap: 10px;
-    border: 1px solid black;
+    border: 1px solid #D1D5DB;
+    ;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
@@ -63,7 +69,8 @@ textarea {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid #D1D5DB;
+    ;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
@@ -75,7 +82,8 @@ textarea {
     flex-direction: row;
     justify-content: center;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid #D1D5DB;
+    ;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
@@ -83,7 +91,8 @@ textarea {
 
 
 .parte2projeto {
-    border: 1px solid black;
+    border: 1px solid #D1D5DB;
+    ;
     margin: 10px;
     border-radius: 10px;
     padding: 10px;
@@ -98,11 +107,12 @@ textarea {
 }
 
 .f1 {
-    border: 1px solid black;
+    border: 1px solid #D1D5DB;
+    ;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
-
+    width: 200px;
 }
 
 .parte4div {
@@ -131,6 +141,34 @@ p {
     justify-content: center;
 }
 
+/* Cores*/
+
+button,
+h1,
+h2 {
+    color: #2D2D2D;
+}
+
+button>i {
+    color: #2D2D2D;
+}
+
+button:hover {
+    color: white;
+    background-color: #1E40AF;
+}
+
+button>i:hover {
+    color: white;
+}
+
+a {
+    color: #3B82F6;
+}
+
+a:hover {
+    color: #2D2D2D;
+}
 
 @media (min-width: 768px) {
     textarea {
