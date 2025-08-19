@@ -1,9 +1,19 @@
 {% extends 'pagina/layout.html' %}
 
 {% block body %}
-<div>
-    <a href="{% url 'projetos' %}">Inserir projetos</a>
-    <a href="{% url 'cursos' %}">Inserir cursos</a>
-    <a href="{% url 'recados' %}">Listar recados</a>
+<div class="parte8">
+
+    <h2>bem vindos a página interna</h2>
+    <div>
+        <p>Para iinserir projetos ou cursos clique no respectivo link na barra de navegação</p>
+        <p>Para listar os recados recebidos também verifique o respectivo link na barra de navegação</p>
+        <p>Para editar ou excluir projetos ou cursos na página, <a href="{% url 'index' %}">inicial</a> agora está
+            ativado
+            botões
+            de alterar e excluir dados</p>
+    </div>
+
 </div>
 {% endblock %}
+
+

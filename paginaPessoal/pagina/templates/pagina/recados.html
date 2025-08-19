@@ -1,15 +1,15 @@
 {% extends 'pagina/layout.html' %}
 {% block body %}
-<div>
+<div class="parte9">
     <div>
         <h2>Lista de recados recebidos:</h2>
         {% for r in recados %}
-        <div>
+        <div class="parte9">
             <p><strong>Data:</strong>{{r.dataRecados}}</p>
             <p><strong>Nome:</strong>{{r.nomeRecados}}</p>
             <p><strong>Email:</strong>{{r.emailRecados}}</p>
             <p><strong>Assunto:</strong>{{r.assuntoRecados}}</p>
-            <p><strong>Mensagem:</strong>{{r.mensagemRecados}}</p>
+            <p class="mensagem"><strong>Mensagem:</strong>{{r.mensagemRecados}}</p>
         </div>
 
         {% endfor %}

@@ -13,17 +13,23 @@ def index(request):
 
     projetos = Projetos.objects.all()
     cursos = Cursos.objects.all()
+    erro = None
 
     if request.method == "POST":
         nome = request.POST['nomeRecados']
         email = request.POST['emailRecados']
         assunto = request.POST['assuntoRecados']
         mensagem = request.POST['mensagemRecados']
+
+        if not nome or not email or not assunto or not mensagem:
+            erro = "preencha os campos necessários"
+
         registro = Recados(nomeRecados=nome, emailRecados=email, assuntoRecados=assunto,
                            mensagemRecados=mensagem, dataRecados=datetime.now())
         registro.save()
         return HttpResponseRedirect(reverse('index'))
-    return render(request, "pagina/index.html", {"projetos": projetos, "cursos": cursos})
+
+    return render(request, "pagina/index.html", {"projetos": projetos, "cursos": cursos,"erro":erro })
 
 
 def loginv(request):

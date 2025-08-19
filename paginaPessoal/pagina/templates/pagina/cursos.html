@@ -1,22 +1,23 @@
 {% extends 'pagina/layout.html' %}
 {% block body %}
 <div>
-    <div>
+    <div class="parte10">
         <form action="{% url 'cursos' %}" method="post">
             {% csrf_token %}
             <label>Curso:</label><br>
-            <input type="text" name="tituloCursos" id="tituloCursos"><br>
+            <input type="text" name="tituloCursos" id="tituloCursos" required><br>
             <label>Instituição:</label><br>
-            <input type="text" name="instituicaoCursos" id="instituicaoCursos"><br>
+            <input type="text" name="instituicaoCursos" id="instituicaoCursos" required><br>
             <label>ano de conclusão:</label><br>
-            <input type="number" name="anoCursos" id="anoCursos"><br>
+            <input type="number" name="anoCursos" id="anoCursos" required><br>
             <label>Descrição:</label><br>
-            <input type="text" name="descricaoCursos" id="descricaoCursos"><br>
-            <button type="submit">Enviar</button>
+            <input type="text" name="descricaoCursos" id="descricaoCursos" required><br>
+            <button type="submit">Enviar</button><br>
+            <a href="{% url 'restrito' %}"> voltar </a>
         </form>
     </div>
     <div>
-        <a href="{% url 'restrito' %}"> voltar </a>
+
     </div>
 </div>
 

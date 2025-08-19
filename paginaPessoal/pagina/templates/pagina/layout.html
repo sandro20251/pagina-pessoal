@@ -13,14 +13,27 @@
 </head>
 
 <body>
+
     <header>
         <h1>Sandro da Paixão Coelho</h1>
     </header>
+
+
     <nav>
+
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'projetos' %}">Inserir projetos</a>
+        <a href="{% url 'cursos' %}">Inserir cursos</a>
+        <a href="{% url 'recados' %}">Listar recados</a>
+        {% endif %}
         <a href="{% url 'index' %}">início</a>
         <a href="{% url 'login' %}">login</a>
         <a href="{% url 'logout'%}">logout</a>
+
+
     </nav>
+
+
     {% block body %}{% endblock %}
     <script src="{% static 'pagina/dist/scripts.js' %}"></script>
 </body>
