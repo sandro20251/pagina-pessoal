@@ -1,0 +1,15 @@
+{% extends 'pagina/layout.html' %}
+
+{% block body %}
+<div>
+    <h2>Faça seu login no sistema:</h2>
+    <form action="#">
+        {% csrf_token %}
+        <label>Username:</label><br>
+        <input type="text" name="username" id="username" placeholder="username"><br>
+        <label>Password</label><br>
+        <input type="text" name="Password" id="Password"><br>
+        <button type="submit"></button>
+    </form>
+</div>
+{% endblock %}

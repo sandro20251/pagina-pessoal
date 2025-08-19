@@ -1,16 +1,94 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'pagina/layout.html' %}
+{% block body %}
+<div>
+    <h2>Desenvolvedor em transição de carreira, apaixonado por Python, Django e tecnologia.</h2>
+    <img src="#" alt="#">
+</div>
+<div>
+    <div>
+        <h2>Projetos:</h2>
+    </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    {% for p in projetos %}
+    <div>
 
-<body>
-    Olá mundo!
-    <script src="{% static 'pagina/dist/scripts.js' %}"></script>
-</body>
 
-</html>
+        <h3>{{p.tituloProjetos}}</h3>
+        <p>{{p.descricaoProjetos}}</p>
+        <p>{{p.linkProjetos}}</p>
+        <p>{{p.tecnologiasProjetos}}</p>
+
+    </div>
+    {% endfor %}
+</div>
+<div>
+    <h3>Sobre mim:</h3>
+    <p>Meu nome é Sandro Coelho, tenho 40 anos e atualmente trabalho como repositor no Carrefour.</p>
+    <p>Apesar da rotina puxada, sempre mantive a vontade de crescer e aprender coisas novas — e encontrei na programação
+        uma paixão que se transformou em objetivo de vida.</p>
+    <p>Concluí o curso CS50’s Web Programming with Python and JavaScript (CS50W), da Universidade de Harvard, onde
+        aprendi a desenvolver aplicações web completas utilizando Python, Django, JavaScript, HTML, CSS e bancos de
+        dados relacionais.
+        Essa experiência me mostrou que, mesmo começando em uma fase diferente da vida, é possível mergulhar em
+        tecnologia com disciplina e dedicação.
+    </p>
+    <p>
+        Hoje, estou em transição de carreira para a área de desenvolvimento web. Tenho grande interesse em backend com
+        Django, integração de APIs e em construir projetos práticos que possam resolver problemas reais.
+        Além disso, gosto de me desafiar aprendendo mais sobre JavaScript e ferramentas modernas de desenvolvimento.
+
+    </p>
+    <p>
+        Meu objetivo é continuar evoluindo como desenvolvedor, construindo projetos sólidos e compartilhando essa
+        jornada.
+
+
+    </p>
+</div>
+<div>
+    <div>
+        <h2>Formação:</h2>
+    </div>
+    {% for c in cursos%}
+    <div>
+
+        <h3>{{c.tituloCursos}}</h3>
+        <p>{{c.instituicaoCursos}}</p>
+        <p>{{c.anoCursos}}</p>
+        <p>{{c.descricaoCursos}}</p>
+    </div>
+    {% endfor %}
+</div>
+<div>
+    <h2>Contatos:</h2>
+    <div>
+        <a href="#">instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Discord</a>
+        <a href="#">linkedin</a>
+        <a href="#">github</a>
+    </div>
+
+</div>
+<div>
+    <div>
+        <h2>Recados:</h2>
+        <p>caso queira dar sua opinião, sugestão, ou tenha um projeto que queira transformar em site, entre em contato
+            para podermos por em pratica a idéia!!! </p>
+        <form action=""></form>
+        {% csrf_token %}
+        <label>Nome:</label><br>
+        <input type="text" name="nomeRecados" id="nomeRecados"><br>
+        <label>Digite seu email para retorno:</label><br>
+        <input type="email" name="emailRecados" id="emailRecados"><br>
+        <label>Assunto:</label><br>
+        <input type="text" name="assuntoRecados" id="assuntoRecados"><br>
+        <label>deixe aqui sua mensagem:</label><br>
+        <textarea name="mensagemRecados" id="mensagemRecados"></textarea><br>
+        <button type="submit">Enviar</button>
+
+    </div>
+
+
+</div>
+{% endblock %}

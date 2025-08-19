@@ -1,0 +1,20 @@
+{% extends 'pagina/layout.html' %}
+{% block body %}
+<div>
+    <div>
+        <form action="#">
+            {% csrf_token %}
+            <label>Curso:</label><br>
+            <input type="text" name="tituloCursos" id="tituloCursos"><br>
+            <label>Instituição:</label><br>
+            <input type="text" name="instituicaoCursos" id="instituicaoCursos"><br>
+            <label>ano de conclusão:</label><br>
+            <input type="number" name="anoCursos" id="anoCursos"><br>
+            <label>Descrição:</label><br>
+            <input type="text" name="descricaoCursos" id="descricaoCursos"><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

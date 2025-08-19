@@ -1,0 +1,20 @@
+{% extends 'pagina/layout.html' %}
+{% block body %}
+<div>
+    <div>
+        <form action="#">
+            {% csrf_token %}
+            <label>Título do projeto:</label><br>
+            <input type="text" name="tituloProjeto" id="tituloProjeto"><br>
+            <label>Descrição:</label><br>
+            <input type="text" name="descricaoProjeto" id="descricaoProjeto"><br>
+            <label>link do projeto:</label><br>
+            <input type="text" name="linkProjeto" id="linkProjeto"><br>
+            <label>Tecnologias usadas:</label><br>
+            <input type="text" name="tecnologiasProjeto" id="tecnologiasProjeto"><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

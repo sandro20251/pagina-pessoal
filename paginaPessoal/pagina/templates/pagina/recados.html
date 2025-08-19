@@ -1,0 +1,19 @@
+{% extends 'pagina/layout.html' %}
+{% block body %}
+<div>
+    <div>
+        <h2>Lista de recados recebidos:</h2>
+        {% for r in recados %}
+        <div>
+            <p><strong>Data:</strong>{{r.dataRecados}}</p>
+            <p><strong>Nome:</strong>{{r.nomeRecados}}</p>
+            <p><strong>Email:</strong>{{r.emailREcados}}</p>
+            <p><strong>Assunto:</strong>{{r.assuntoRecados}}</p>
+            <p><strong>Mensagem:</strong>{{r.mensagem}}</p>
+        </div>
+
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
