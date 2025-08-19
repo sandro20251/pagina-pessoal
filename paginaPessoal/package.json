@@ -1,0 +1,12 @@
+{
+  "name": "paginapessoal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "obfuscate": "javascript-obfuscator \"pagina/static/pagina/scripts.js\" --output \"pagina/static/pagina/dist/scripts.js\" --compact true --control-flow-flattening true"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
