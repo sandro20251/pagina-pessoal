@@ -75,17 +75,19 @@
         <h2>Recados:</h2>
         <p>caso queira dar sua opinião, sugestão, ou tenha um projeto que queira transformar em site, entre em contato
             para podermos por em pratica a idéia!!! </p>
-        <form action=""></form>
-        {% csrf_token %}
-        <label>Nome:</label><br>
-        <input type="text" name="nomeRecados" id="nomeRecados"><br>
-        <label>Digite seu email para retorno:</label><br>
-        <input type="email" name="emailRecados" id="emailRecados"><br>
-        <label>Assunto:</label><br>
-        <input type="text" name="assuntoRecados" id="assuntoRecados"><br>
-        <label>deixe aqui sua mensagem:</label><br>
-        <textarea name="mensagemRecados" id="mensagemRecados"></textarea><br>
-        <button type="submit">Enviar</button>
+        <form action="{% url 'index' %}" method="post">
+            {% csrf_token %}
+            <label>Nome:</label><br>
+            <input type="text" name="nomeRecados" id="nomeRecados"><br>
+            <label>Digite seu email para retorno:</label><br>
+            <input type="email" name="emailRecados" id="emailRecados"><br>
+            <label>Assunto:</label><br>
+            <input type="text" name="assuntoRecados" id="assuntoRecados"><br>
+            <label>deixe aqui sua mensagem:</label><br>
+            <textarea name="mensagemRecados" id="mensagemRecados"></textarea><br>
+            <button type="submit">Enviar</button>
+        </form>
+
 
     </div>
 

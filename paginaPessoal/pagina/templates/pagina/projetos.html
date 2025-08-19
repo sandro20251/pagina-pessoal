@@ -1,8 +1,9 @@
 {% extends 'pagina/layout.html' %}
 {% block body %}
 <div>
+    
     <div>
-        <form action="#">
+        <form action="{% url 'projetos' %}" method="post">
             {% csrf_token %}
             <label>Título do projeto:</label><br>
             <input type="text" name="tituloProjeto" id="tituloProjeto"><br>

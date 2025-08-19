@@ -80,7 +80,3 @@ class Testes(TestCase):
         c = Client()
         response = c.get("/recados/")
         self.assertEqual(response.status_code, 200)
-
-    # teste de login
-
-    

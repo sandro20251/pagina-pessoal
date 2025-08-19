@@ -2,7 +2,7 @@
 {% block body %}
 <div>
     <div>
-        <form action="#">
+        <form action="{% url 'cursos' %}" method="post">
             {% csrf_token %}
             <label>Curso:</label><br>
             <input type="text" name="tituloCursos" id="tituloCursos"><br>

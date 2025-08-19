@@ -5,12 +5,24 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from datetime import datetime
 # Create your views here.
 
 
 def index(request):
+
     projetos = Projetos.objects.all()
     cursos = Cursos.objects.all()
+
+    if request.method == "POST":
+        nome = request.POST['nomeRecados']
+        email = request.POST['emailRecados']
+        assunto = request.POST['assuntoRecados']
+        mensagem = request.POST['mensagemRecados']
+        registro = Recados(nomeRecados=nome, emailRecados=email, assuntoRecados=assunto,
+                           mensagemRecados=mensagem, dataRecados=datetime.now())
+        registro.save()
+        return HttpResponseRedirect(reverse('index'))
     return render(request, "pagina/index.html", {"projetos": projetos, "cursos": cursos})
 
 
@@ -34,10 +46,33 @@ def logoutv(request):
 
 
 def projetos(request):
+    if request.method == "POST":
+        titulo = request.POST['tituloProjeto']
+        descricao = request.POST['descricaoProjeto']
+        link = request.POST['linkProjeto']
+        tecnologias = request.POST['tecnologiasProjeto']
+
+        registro = Projetos(tituloProjetos=titulo, descricaoProjetos=descricao,
+                            linkProjetos=link, tecnologiasProjetos=tecnologias)
+        registro.save()
+
+        return HttpResponseRedirect(reverse('index'))
+
     return render(request, 'pagina/projetos.html')
 
 
 def cursos(request):
+    if request.method == "POST":
+        titulo = request.POST["tituloCursos"]
+        instituicao = request.POST["instituicaoCursos"]
+        ano = request.POST["anoCursos"]
+        descricao = request.POST["descricaoCursos"]
+
+        registro = Cursos(tituloCursos=titulo, instituicaoCursos=instituicao,
+                          anoCursos=ano, descricaoCursos=descricao)
+        registro.save()
+        return HttpResponseRedirect(reverse('index'))
+
     return render(request, 'pagina/cursos.html')
 
 
