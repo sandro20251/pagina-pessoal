@@ -1,8 +1,12 @@
 {% extends 'pagina/layout.html' %}
+{% load static %}
 {% block body %}
 <div class="parte1">
     <h2>Desenvolvedor em transição de carreira, apaixonado por Python, Django e tecnologia.</h2>
-    <img src="#" alt="#">
+    <div id="imgPai">
+        <img src="{% static 'pagina/san4.jpeg' %}" id="estiloimg">
+    </div>
+
 </div>
 <div class="parte11">
     <h2>Tecnologias usadas</h2>
@@ -11,25 +15,12 @@
         <button><i class="fa-brands fa-js"></i></button>
         <button><i class="fa-brands fa-docker"></i></button>
         <button>
-            <<i class="devicon-django-plain-wordmark"></i>
+            <i class="devicon-django-plain-wordmark"></i>
         </button>
     </div>
 </div>
-<div class="parte13">
-    <h2>Atualização de projeto:</h2>
-    <form action="#" method="post">
-        {% csrf_token %}
-        <label>Título do projeto:</label><br>
-        <input type="text" name="tituloProjeto2" id="tituloProjeto2" required><br>
-        <label>Descrição:</label><br>
-        <input type="text" name="descricaoProjeto2" id="descricaoProjeto2" required><br>
-        <label>link do projeto:</label><br>
-        <input type="url" name="linkProjeto2" id="linkProjeto2" required><br>
-        <label>Tecnologias usadas:</label><br>
-        <input type="text" name="tecnologiasProjeto2" id="tecnologiasProjeto2" required><br>
-        <button type="submit"><i class="fas fa-plus"></i></button>
 
-    </form>
+
 
 </div>
 <div class="parte2">
@@ -37,93 +28,80 @@
         <h2>Projetos:</h2>
     </div>
     <div class="parte2div">
-        {% for p in projetos %}
-        <div class="parte2projeto" <h3>{{p.tituloProjetos}}</h3>
-            <p>{{p.descricaoProjetos}}</p>
-            <p>{{p.linkProjetos}}</p>
-            <p>{{p.tecnologiasProjetos}}</p>
-            {% if request.user.is_authenticated %}
-            <div class="btn1">
-                <form action="">
-                    <button type="submit"><i class="fa-solid fa-pen"></i></button>
-                </form>
-                <form action="">
-                    <button type="submit"><i class="fa-solid fa-trash"></i></button>
-                </form>
-            </div>
-
-            {% endif %}
-        </div>
-        {% endfor %}
+        Preencher projetos
     </div>
+
+</div>
 
 </div>
 <div class="parte3">
     <h3>Sobre mim:</h3>
-    <p>Meu nome é Sandro Coelho, tenho 40 anos e atualmente trabalho como repositor no Carrefour.</p>
-    <p>Apesar da rotina puxada, sempre mantive a vontade de crescer e aprender coisas novas — e encontrei na programação
-        uma paixão que se transformou em objetivo de vida.</p>
-    <p>Concluí o curso CS50’s Web Programming with Python and JavaScript (CS50W), da Universidade de Harvard, onde
+    <p>Meu nome é Sandro Coelho, tenho 40 anos e atualmente trabalho como repositor no Carrefour.
+        Apesar da rotina puxada, sempre mantive a vontade de crescer e aprender coisas novas e
+        encontrei na programação uma paixão que se transformou em objetivo de vida.
+
+        Concluí o curso CS50’s Web Programming with Python and JavaScript (CS50W), da Universidade de Harvard, onde
         aprendi a desenvolver aplicações web completas utilizando Python, Django, JavaScript, HTML, CSS e bancos de
-        dados relacionais.
-        Essa experiência me mostrou que, mesmo começando em uma fase diferente da vida, é possível mergulhar em
-        tecnologia com disciplina e dedicação.
-    </p>
-    <p>
+        dados relacionais. Essa experiência me mostrou que, mesmo começando em uma fase diferente da vida, é possível
+        mergulhar em tecnologia com disciplina e dedicação.
+
         Hoje, estou em transição de carreira para a área de desenvolvimento web. Tenho grande interesse em backend com
         Django, integração de APIs e em construir projetos práticos que possam resolver problemas reais.
         Além disso, gosto de me desafiar aprendendo mais sobre JavaScript e ferramentas modernas de desenvolvimento.
-
-    </p>
-    <p>
         Meu objetivo é continuar evoluindo como desenvolvedor, construindo projetos sólidos e compartilhando essa
         jornada.
 
 
     </p>
 </div>
-<div class="parte14">
-    <h2>Atualização de curso:</h2>
-    <form action="#" method="post">
-        {% csrf_token %}
-        <label>Curso:</label><br>
-        <input type="text" name="tituloCursos2" id="tituloCursos2" required><br>
-        <label>Instituição:</label><br>
-        <input type="text" name="instituicaoCursos2" id="instituicaoCursos2" required><br>
-        <label>ano de conclusão:</label><br>
-        <input type="number" name="anoCursos2" id="anoCursos2" required><br>
-        <label>Descrição:</label><br>
-        <input type="text" name="descricaoCursos2" id="descricaoCursos2" required><br>
-        <button type="submit"><i class="fas fa-plus"></i></button>
 
-    </form>
-</div>
 <div class="parte4">
     <div>
         <h2>Formação:</h2>
     </div>
     <div class="parte4div">
-        {% for c in cursos%}
-        <div class="f1">
-
-            <h3>{{c.tituloCursos}}</h3>
-            <p>{{c.instituicaoCursos}}</p>
-            <p>{{c.anoCursos}}</p>
-            <p>{{c.descricaoCursos}}</p>
-            {% if request.user.is_authenticated %}
-            <div class="btn1">
-                <form action="">
-                    <button type="submit"><i class="fa-solid fa-pen"></i></button>
-                </form>
-                <form action="">
-                    <button type="submit"><i class="fa-solid fa-trash"></i></button>
-                </form>
+        <div class="curso1">
+            <div class="divDescricao">
+                <p><strong class="cursoHr">Curso: </strong>CS50x</p>
+                <p><strong class="cursoHr">Instituição: </strong>Havardx</p>
+                <p><strong class="cursoHr">Status: </strong> Concluído</p>
+                <p><strong class="cursoHr">Conclusão: </strong> 2025</p>
             </div>
 
-            {% endif %}
+            <strong class="cursoHr">Descrição: </strong>
+            <p>Lógica de programação, HTML e CSS, Lingugem C, Visão resumida de manipulação de strings, JavaScript, Python, Framework Flask,persistencia de dados, Visão resumida de algoritmos </p>
+            <p> </p>
+
         </div>
-        {% endfor %}
+
+        <div class="curso1">
+            <div class="divDescricao">
+                <p><strong class="cursoHr">Curso: </strong>CS50w</p>
+                <p><strong class="cursoHr">Instituição: </strong>Havardx</p>
+                <p><strong class="cursoHr">Status: </strong> Concluído</p>
+                <p><strong class="cursoHr">Conclusão: </strong> 2025</p>
+            </div>
+
+            <strong class="cursoHr">Descrição: </strong><br>
+            <p>HTML e CSS, git e gitub, Python, framework Django( visão geral, persistência e segurança), JavaScript, testes, Docker e escalabilidade</p>
+        </div>
+        <div class="curso1">
+            <div class="divDescricao">
+                <p><strong class="cursoHr">Curso: </strong>Docker</p>
+                <p><strong class="cursoHr">Instituição: </strong>Udemy</p>
+                <p><strong class="cursoHr">Status: </strong> Em andamento</p>
+                <p><strong class="cursoHr">Conclusão: </strong> prevista para 2025</p>
+            </div>
+
+            <strong class="cursoHr">Descrição:</strong><br>
+            <p>Curso voltado ao entendimento da dinâmica do docker em vários tipos de aplicações usando várias tecnologias</p>
+
+
+        </div>
+
     </div>
+
+</div>
 
 </div>
 <div class="parte5">
@@ -151,7 +129,7 @@
         </div>
 
         <h2>Recados:</h2>
-        <p>caso queira dar sua opinião, sugestão, ou tenha um projeto que queira transformar em site, entre em contato
+        <p>Caso queira dar sua opinião, sugestão, ou tenha um projeto que queira transformar em site, entre em contato
             para podermos por em pratica a idéia!!! </p>
         <form action="{% url 'index' %}" method="post">
             {% csrf_token %}

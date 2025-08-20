@@ -1,3 +1,8 @@
+* {
+    background-color: #111827;
+    color: #E5E7EB;
+}
+
 header {
     display: flex;
     justify-content: center;
@@ -9,7 +14,8 @@ nav {
     justify-content: center;
     text-align: center;
     gap: 10px;
-    border: 1px solid black;
+    border: 1px solid #374151;
+    ;
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
@@ -36,10 +42,8 @@ textarea {
 
     height: 200px;
     width: 180px;
-
-
-
-
+    background-color: #E5E7EB;
+    color: #111827
 }
 
 .hide {
@@ -63,7 +67,8 @@ textarea {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid #374151;
+    ;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
@@ -75,7 +80,8 @@ textarea {
     flex-direction: row;
     justify-content: center;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid #374151;
+    ;
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
@@ -83,7 +89,8 @@ textarea {
 
 
 .parte2projeto {
-    border: 1px solid black;
+    border: 1px solid #374151;
+    ;
     margin: 10px;
     border-radius: 10px;
     padding: 10px;
@@ -98,17 +105,41 @@ textarea {
 }
 
 .f1 {
-    border: 1px solid black;
+    border: 1px solid #374151;
+
     border-radius: 10px;
     margin: 10px;
     padding: 10px;
-
+    width: 200px;
 }
 
 .parte4div {
     display: flex;
     justify-content: center;
+    flex-direction: row;
     flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+
+.curso1 {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 450px;
+    padding: 10px;
+    text-align: left;
+
+}
+
+.cursoHr {
+    color: #FF8C00
+}
+
+.divDescricao {
+    display: flex;
+    flex-direction: column;
+
 }
 
 button {
@@ -130,6 +161,58 @@ p {
     flex-direction: row;
     justify-content: center;
 }
+
+/* Cores*/
+input {
+    background-color: #E5E7EB;
+    color: #111827;
+}
+
+button,
+h1,
+h2 {
+    color: #FF8C00;
+}
+
+button>i {
+    color: #E5E7EB;
+}
+
+button:hover {
+
+    background-color: #FF7000;
+    color: #E5E7EB;
+}
+
+button>i:hover {
+    color: #FF7000;
+}
+
+a {
+    color: #FF7000;
+}
+
+a:hover {
+    color: white
+}
+
+#estiloimg {
+
+    width: 250px;
+    height: 250px;
+
+}
+
+.imgPai {
+    display: flex;
+    justify-content: center;
+}
+
+#hide {
+    display: none;
+}
+
+
 
 
 @media (min-width: 768px) {
