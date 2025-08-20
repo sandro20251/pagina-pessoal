@@ -30,7 +30,6 @@ nav {
 
 label,
 input,
-button,
 textarea {
     margin: 5px;
     border-radius: 10px;
@@ -124,7 +123,7 @@ textarea {
 
 
 .curso1 {
-    border: 1px solid white;
+    border: 1px solid #374151;
     border-radius: 10px;
     width: 450px;
     padding: 10px;
@@ -143,8 +142,16 @@ textarea {
 }
 
 button {
+    margin: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #E5E7EB;
+    color: #111827;
 
-    padding: 10px;
+
+}
+.btn200 {
+    width: 200px;
 }
 
 p {
@@ -174,9 +181,7 @@ h2 {
     color: #FF8C00;
 }
 
-button>i {
-    color: #E5E7EB;
-}
+
 
 button:hover {
 
@@ -211,6 +216,18 @@ a:hover {
 #hide {
     display: none;
 }
+
+.estiloResposta {
+    background-color: #FF8C00;
+    color: #111827;
+    text-align: center;
+    border: 1px solid #111827;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+}
+
 
 
 
