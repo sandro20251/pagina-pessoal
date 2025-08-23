@@ -2,7 +2,7 @@
 {% load static %}
 {% block body %}
 <div class="parte1">
-    <h2>Desenvolvedor em transição de carreira, apaixonado por Python, Django e tecnologia.</h2>
+    <h2><i>"Desenvolvedor em transição de carreira, apaixonado por Python, Django e tecnologia."</i></h2>
     <div id="imgPai">
         <img src="{% static 'pagina/sandro1.jpg' %}" id="estiloimg">
     </div>
@@ -70,15 +70,13 @@
     <div class="parte2div">
         <div class="curso1">
             <div class="divDescricao">
-                <p><strong class="cursoHr">Projeto: </strong>Calculadora musical</p>
-                <p><strong class="cursoHr">link: </strong><a href="#">Calculadora musicaç</a></p>
+                <p><strong class="cursoHr">Projeto: </strong>toDo List (Tarefas)</p>
+                <p><strong class="cursoHr">link: </strong><a href="#">ToDo List</a></p>
                 <p><strong class="cursoHr">Tecnologias: </strong> Html, CSS, Django, Python, JavaScript</p>
             </div>
 
             <strong class="cursoHr">Descrição:</strong><br>
-            <p>Calculadora simples que tem como objetivo expor os campos harmônicos em uma determinada tonalidade. Ao
-                escolher a nota e o tipo de escala ( se amior ou menor ) temos um esboço das notas do campo harmônico
-                além dos acordes em tríades e tétrades que combinam nesta tonalidade
+            <p>Todo List que procura especificar os dados da tarefa identificando o usuário que adicionou a tarefa, o nome, objetivos, descrição, quando e onde a tarefa deve ser executada. Sistmea feito com framework Django usado para persistir dados e garantir segurança, css/html para estruturação e design e javascript para ocultar mostrar elementos e melhorar aparência de botões.
             </p>
 
 
@@ -90,19 +88,11 @@
 </div>
 <div class="parte3">
     <h2>Sobre mim:</h2>
-    <p>Meu nome é Sandro Coelho, tenho 40 anos e atualmente trabalho como repositor no Carrefour. Apesar da rotina
-        puxada, sempre mantive a vontade de crescer e aprender coisas novas e encontrei na programação uma paixão que se
-        transformou em objetivo de vida.
+    <p>Meu nome é Sandro Coelho, tenho 40 anos e atualmente trabalho como repositor no Carrefour. Apesar da rotina puxada, sempre mantive a vontade de crescer e aprender coisas novas e encontrei na programação uma paixão que se transformou em objetivo de vida.
 
-        Concluí o curso CS50’s Web Programming with Python and JavaScript (CS50W), da Universidade de Harvard, onde
-        aprendi a desenvolver aplicações web completas utilizando Python, Django, JavaScript, HTML, CSS e bancos de
-        dados relacionais. Essa experiência me mostrou que, mesmo começando em uma fase diferente da vida, é possível
-        mergulhar em tecnologia com disciplina e dedicação.
+        Concluí o curso CS50’s Web Programming with Python and JavaScript (CS50W), da Universidade de Harvard, onde aprendi a desenvolver aplicações web completas utilizando Python, Django, JavaScript, HTML, CSS e bancos de dados relacionais. Essa experiência me mostrou que, mesmo começando em uma fase diferente da vida, é possível mergulhar em tecnologia com disciplina e dedicação.
 
-        Hoje, estou em transição de carreira para a área de desenvolvimento web. Tenho grande interesse em backend com
-        Django, integração de APIs e em construir projetos práticos que possam resolver problemas reais. Além disso,
-        gosto de me desafiar aprendendo mais sobre JavaScript e ferramentas modernas de desenvolvimento. Meu objetivo é
-        continuar evoluindo como desenvolvedor, construindo projetos sólidos e compartilhando essa jornada.
+        Hoje, estou em transição de carreira para a área de desenvolvimento web. Tenho grande interesse em backend com Django, integração de APIs e em construir projetos práticos que possam resolver problemas reais. Além disso, gosto de me desafiar aprendendo mais sobre JavaScript e ferramentas modernas de desenvolvimento. Meu objetivo é continuar evoluindo como desenvolvedor, construindo projetos sólidos e compartilhando essa jornada.
 
 
     </p>
@@ -122,8 +112,7 @@
             </div>
 
             <strong class="cursoHr">Descrição: </strong>
-            <p>Lógica de programação, HTML e CSS, Lingugem C, Visão resumida de manipulação de strings, JavaScript,
-                Python, Framework Flask,persistencia de dados, Visão resumida de algoritmos </p>
+            <p>Lógica de programação, HTML e CSS, Lingugem C, Visão resumida de manipulação de strings, JavaScript, Python, Framework Flask,persistencia de dados, Visão resumida de algoritmos </p>
             <p> </p>
 
         </div>
@@ -137,8 +126,7 @@
             </div>
 
             <strong class="cursoHr">Descrição: </strong><br>
-            <p>HTML e CSS, git e gitub, Python, framework Django( visão geral, persistência e segurança), JavaScript,
-                testes, Docker e escalabilidade</p>
+            <p>HTML e CSS, git e gitub, Python, framework Django( visão geral, persistência e segurança), JavaScript, testes, Docker e escalabilidade</p>
         </div>
         <div class="curso1">
             <div class="divDescricao">
@@ -149,8 +137,7 @@
             </div>
 
             <strong class="cursoHr">Descrição:</strong><br>
-            <p>Curso voltado ao entendimento da dinâmica do docker em vários tipos de aplicações usando várias
-                tecnologias</p>
+            <p>Curso voltado ao entendimento da dinâmica do docker em vários tipos de aplicações usando várias tecnologias</p>
 
 
         </div>
@@ -185,8 +172,7 @@
         </div>
 
         <h2>Recados:</h2>
-        <p>Caso queira dar sua opinião, sugestão, ou tenha um projeto que queira transformar em site, entre em contato
-            para podermos por em pratica a idéia!!! </p>
+        <p>Caso queira dar sua opinião, sugestão, ou tenha um projeto que queira transformar em site, entre em contato para podermos por em pratica a idéia!!! </p>
         <form action="{% url 'index' %}" method="post">
             {% csrf_token %}
             <div class="input1">
